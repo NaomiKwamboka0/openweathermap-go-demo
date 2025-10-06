@@ -1,84 +1,86 @@
-## OpenWeatherMap Go Demo
+# OpenWeatherMap Go Demo
 
 ## Overview
 
-This is a beginner-friendly Go application that fetches and displays the current weather for a specified city using the OpenWeatherMap API. It demonstrates how to make HTTP requests, handle JSON responses, and use environment variables for API keys in Go.
+A beginner-friendly Go application that fetches and displays current weather for a specified city using the OpenWeatherMap API.
 
 ## Features
 
-- Fetches current weather data for any city
-- Displays temperature and weather description
-- Uses only Go standard library packages
+- Fetches current weather for any city
+- Uses Go’s standard library (no extra dependencies)
+- Securely handles API keys via environment variables
 
 ## System Requirements
 
-- Linux (but works on Mac/Windows too)
-- Go 1.17+ installed
-- Internet connection
+- Linux, macOS, or Windows
+- Go 1.17 or later
 - OpenWeatherMap API key (free from [openweathermap.org](https://openweathermap.org/))
 
 ## Setup Instructions
 
-1. **Install Go**
+1. **Install Go**  
+   On Ubuntu/Debian:
+   ```sh
+   sudo apt update
+   sudo apt install golang-go
+   ```
 
-    ```sh
-    sudo apt update
-    sudo apt install golang-go
-    ```
+2. **Clone the Repository**
+   ```sh
+   git clone https://github.com/YOUR_GITHUB_USERNAME/openweathermap-go-demo.git
+   cd openweathermap-go-demo
+   ```
 
-2. **Clone this repository**
+3. **Get Your API Key**
+   - Sign up at [OpenWeatherMap](https://home.openweathermap.org/users/sign_up)
+   - Find your key in the API keys section
 
-    ```sh
-    git clone https://github.com/NaomiKwamboka0/openweathermap-go-demo.git
-    cd openweathermap-go-demo
-    ```
+4. **Set Your API Key**
+   ```sh
+   export OWM_API_KEY=your_actual_api_key
+   ```
 
-3. **Get your OpenWeatherMap API key**
+## How to Run
 
-    - Sign up at [https://home.openweathermap.org/users/sign_up](https://home.openweathermap.org/users/sign_up)
-    - Log in and find your API key in the API keys section
+```sh
+go run main.go
+```
 
-4. **Set your API key as an environment variable**
-
-    ```sh
-    export OWM_API_KEY=your_actual_api_key
-    ```
-
-5. **Run the program**
-
-    ```sh
-    go run main.go
-    ```
-
-## Example Output
-
+**Example output:**
 ```
 Weather in Nairobi: 24.5°C, few clouds
 ```
 
 ## Changing the City
 
-- Open `main.go` and edit the line:
-    ```go
-    city := "Nairobi"
-    ```
-  Replace `"Nairobi"` with your desired city.
+Edit the line in `main.go`:
+```go
+city := "Nairobi"
+```
+Replace `"Nairobi"` with any city you want.
+
+## AI Prompts Used
+
+Below are some example AI prompts I used to complete this project:
+
+- “How do I fetch data from an API in Go?”
+- “What is the simplest way to parse JSON in Go?”
+- “How do I use environment variables in Go?”
+- “How do I handle errors from HTTP requests in Go?”
+- “How do I get an API key from OpenWeatherMap?”
+
+For a detailed step-by-step guide, my reflections, and the full prompt journal, **see [toolkit.md](toolkit.md)**.
 
 ## Troubleshooting
 
-- **API key error:**  
-  If you see `Please set the OWM_API_KEY environment variable.`, make sure you set the environment variable correctly.
-
-- **API call failed:**  
-  If you see a status error, check your API key or network connection.
+- **API key error:** Ensure you've set the API key as described above.
+- **API call failed:** Check your internet connection and API key validity.
 
 ## References
 
 - [OpenWeatherMap API Docs](https://openweathermap.org/api)
 - [Go Documentation](https://go.dev/doc/)
-- [Go net/http Package](https://pkg.go.dev/net/http)
-- [Go encoding/json Package](https://pkg.go.dev/encoding/json)
 
 ## License
 
-This project is for educational purposes.
+For educational purposes.
