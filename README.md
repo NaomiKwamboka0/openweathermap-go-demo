@@ -27,7 +27,7 @@ A beginner-friendly Go application that fetches and displays current weather for
 
 2. **Clone the Repository**
    ```sh
-   git clone https://github.com/YOUR_GITHUB_USERNAME/openweathermap-go-demo.git
+   git clone https://github.com/NaomiKwamboka0/openweathermap-go-demo.git
    cd openweathermap-go-demo
    ```
 
